@@ -1,0 +1,23 @@
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Backend Spring Boot / Maven
+backend/target/
+
+
+.env
+.env.*
+!.env.example
+application-local.properties
+**/application-local.yml
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
