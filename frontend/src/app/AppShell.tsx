@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Activity, Bell, Boxes, ChevronDown, ClipboardList, Command, Cpu, Database, Download, FileSearch, Fingerprint, KeyRound, LayoutDashboard, LogOut, Menu, Moon, Network, PanelLeftClose, PanelLeftOpen, Search, ServerCog, Settings2, Shield, ShieldAlert, SlidersHorizontal, Sun, Users, WifiOff } from "lucide-react";
+import { Activity, Bell, Boxes, ChevronDown, ClipboardList, Command, Cpu, Database, Download, FileSearch, Fingerprint, KeyRound, LayoutDashboard, LogOut, Menu, Moon, Network, PanelLeftClose, PanelLeftOpen, Search, ServerCog, Settings2, Shield, ShieldAlert, SlidersHorizontal, Sun, Users, WifiOff ,ChevronsLeft, ChevronsRight  } from "lucide-react";
 import { GlassModal, StatusBadge } from "../components/glass";
 import { assets, cryptoUsages, findings, scans, services } from "../mocks/data";
 import { can, rolePermissions } from "../lib/permissions";
@@ -61,7 +61,7 @@ export function AppShell() {
     <div className="noise-layer" aria-hidden="true" />
     <aside className="sidebar glass-surface">
       <div className="brand-lockup"><div className="brand-mark"><span className="brand-glyph">P</span><i /></div><div className="brand-copy"><strong>PQC<span>-SOFT</span></strong><small>CRYPTOGRAPHIC INTELLIGENCE</small></div></div>
-      <button className="sidebar-toggle icon-button" onClick={toggleSidebar} aria-label={collapsed ? "Déployer la navigation" : "Réduire la navigation"}>{collapsed ? <PanelLeftOpen size={17} /> : <PanelLeftClose size={17} />}</button>
+      <button className="sidebar-toggle icon-button" onClick={toggleSidebar} aria-label={collapsed ? "Déployer la navigation" : "Réduire la navigation"}>{collapsed ? <ChevronsRight size={14} /> : <ChevronsLeft size={14} />}</button>
       <nav className="side-nav" aria-label="Navigation principale">
         {groups.map((group) => {
           const items = visibleItems.filter((item) => item.group === group);
